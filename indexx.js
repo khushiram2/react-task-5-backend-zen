@@ -79,7 +79,7 @@ app.delete('/teacher/delete/:_id', async (req, res) => {
     const { _id } = req.params;
     const teacher = await client
       .db("school2")
-      .collection("students")
+      .collection("teacher")
       .deleteOne({ _id: new ObjectId(_id) });
     res.json(teacher);
   } catch (error) {
